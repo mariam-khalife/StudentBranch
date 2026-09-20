@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name ="viewport" content="width =device-width ,initial-scale=1.0">
+    <title>IEEE UA Branch </title> 
+    <link rel="stylesheet" href="Styles/onestyle.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+   
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+ 
+
+<body>
+    <header class="header">
+       <nav>
+        <a href ="index.html">
+            <img src="images/logo.jpg" alt ="IEEE Logo" class="logo">
+        </a>
+
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul class="menu">
+               <li><a href="index.html">Home</a></li>
+               <li><a href="index.html#about-ieee">About IEEE</a></li>
+               <li><a href="whyus.html">Why Join IEEE?</a></li>
+               <li><a href="index.html#events">Events</a></li>
+               <li><a href="registrer.html">How to Register</a></li>
+            </ul>
+        </div>
+
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+       </nav>
+    </header>
+
+    <section class="home-hero ">
+        <div class="home-hero-text">
+            <h1>Shapping Tomorrow's Leaders</h1>
+            <p>We bring together students passionate about engineering and technology,<br> offering opportunities to learn, connect, and grow. </p>
+            <a href="whyus.html" class="btn">Visit Us To know More</a>
+        </div> 
+        <div class="hero-slider">
+            <img src="Images\hero1.jpg"  alt="photo1">
+            <img src="Images\hero2.jpg" alt="photo2">
+            <img src="Images\hero3.1.jpeg" alt="photo3">
+        </div>
+        <p>ieee ua branch participation</p>
+    </section>
+
+    <!---  ----Events----    --->
+    <section id="events">
+        <h1>Our Events</h1>
+
+        <div class="events-grid">
+            <article class="event-card">
+                <div class="event-slider">
+                    <button class="arrow prev">&#10094;</button>
+
+                    <img src="Images/hike1.jpg" alt="Event1 photo1" class="active">
+                    <img src="Images/hike5.jpg" alt="Event1 photo2">
+                    <img src="Images/hike8.jpg" alt="Event1 photo3">
+
+                    <button class="arrow next">&#10095;</button>
+                  
+                </div>
+                <h3>Mountain Hike Adventure </h3>
+                <p>IEEE members enjoyed their time exploring nature, hiking through scenic trails, and discovering new places</p>
+            </article>
+
+            <!-- Event 2 -->
+            <article class="event-card">
+                <div class="event-slider">
+                    <button class="arrow prev">&#10094;</button>
+
+                    <img src="Images\RaspberryPiboard2.jpg" alt="Event2 photo1" class="active">
+                    <img src="Images\RaspberryPi4.jpg" alt="Event2 photo2">
+                    <img src="Images\RaspberryPi5.jpg" alt="Event2 photo3">
+                    <img src="Images\RaspberryPi2.jpg" alt="Event2 photo4">
+                    
+                    <button class="arrow next">&#10095;</button>
+                </div>
+                <h3>Raspberry Pi Workshop </h3>
+                <p>Participants learned how to program and connect hardware components using Raspberry Pi, gaining hands-on experience in innovation and embedded systems.</p>
+            </article>
+            
+            <!-- Event 3 -->
+            <article class="event-card">
+                <div class="event-slider">
+                    <button class="arrow prev">&#10094;</button>
+                    <img src="Images\blockchain1.png" alt="Event3 photo1" class="active">
+                    <img src="Images\pic4.jpg" alt="Event3 photo2">
+                    <button class="arrow next">&#10095;</button>
+                </div>
+                <h3>Blockchain Webinar </h3>
+                <p>Members deepened their understanding of blockchain and Web 3.0 technologies, exploring how digital transformation shapes the future of engineering.</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- UPCOMING_EVENTS -->
+<section class="upcoming-events">
+        <div class="container">
+            <h2>Upcoming Events</h2>
+            <div class="upcoming-content">
+                <div class="calendar-container">
+                    <div class="calendar-header">
+                        <h3 id="currentMonth">November 2025</h3>
+                        <div class="calendar-nav">
+                            <button onclick="previousMonth()">
+                                <i class="fa fa-chevron-left"></i>
+                            </button>
+                            <button onclick="nextMonth()">
+                                <i class="fa fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="calendar-body">
+                        <div class="calendar-weekdays">
+                            <div class="calendar-weekday">Sun</div>
+                            <div class="calendar-weekday">Mon</div>
+                            <div class="calendar-weekday">Tue</div>
+                            <div class="calendar-weekday">Wed</div>
+                            <div class="calendar-weekday">Thu</div>
+                            <div class="calendar-weekday">Fri</div>
+                            <div class="calendar-weekday">Sat</div>
+                        </div>
+                        <div class="calendar-dates" id="calendarDates"></div>
+                    </div>
+                </div>
+                
+                <div class="event-list">
+                    <h4>This Month's Events</h4>
+                    <div class="event-item">
+                        <span class="event-date-badge">Nov 10, 2025</span>
+                        <h5>Sociaty  Day</h5>
+                        <p>Join us in campus event where you will discover the variety of societies in the faculty, their activities, facilities, and the benefits of joining. </p>
+                    </div>
+                    <div class="event-item">
+                        <span class="event-date-badge">Nov 28, 2025</span>
+                        <h5>Cyber Security Workshop</h5>
+                        <p>Organized in collaboration with Semicolon company to provide real-world defense techniques and best practices.</p>
+                    </div>
+                    <div class="event-item">
+                        <span class="event-date-badge">Dec 5, 2025</span>
+                        <h5>IoT Innovation Challenge</h5>
+                        <p>Participate in our annual IoT challenge and showcase your innovative solutions to real-world problems.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</section>
+
+<!-- ===== About IEEE Section ===== -->
+<section  id="about-ieee"  >
+    <div class="about-container">
+        <h3>About IEEE</h3>
+        <p>IEEE is the world's largest technical professional organization dedicated to advancing technology for the benefit of humanity.</p>
+    </div>
+</section>
+
+
+<!-- ===== Footer Section ===== -->
+ <footer class="footer">
+        <div class="footer-container">
+        <!-- Top Section: Links and Contact -->
+        <div class="footer-top">
+            <div class="footer-section">
+                <h3>IEEE UA Branch</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/UAIEEESB/" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/ieee_ua?igsh=eHRlZXltMWFwbjI4" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/ieee-ua-student-branch/?originalSubdomain=lb" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                   <a href="https://x.com/ieeelebanon?lang=en" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Quick Links</h4> 
+                <ul>
+                    <li><a href="index1v2.html">Home</a></li>
+                    <li><a href="index1v2.html#about-ieee">About IEEE</a></li>
+                    <li><a href="whyus.html">Why Join IEEE?</a></li>
+                    <li><a href="index1v2.html#Events">Events</a></li>
+                    <li><a href="registrer.html">How to Register</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <div class="contact-info">
+                     <a href="mailto:ieee@ua.edu.lb" class="contact-link">
+                            <i class="fas fa-envelope"></i>
+                            <span>ieee@ua.edu.lb</span>
+                        </a>
+                    </div>
+                    <div class="contact-item">
+                        <a href="tel:+9611123456" class="contact-link">
+                            <i class="fas fa-phone"></i>
+                            <span>+961 1 123 456</span>
+                        </a>
+                </div>
+            </div>
+            <!-- Newsletter -->
+             <div class="footer-section footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <p>Subscribe to our newsletter for the latest events and news.</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Your email address">
+                        <button type="submit">Subscribe</button>
+                    </div>
+                </div>
+            
+        </div>
+        
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 IEEE UA Branch. All Rights Reserved.</p>
+        </div>
+    </div>
+
+  
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<!-- -----JavaScript for togggle-------  -->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
+<!--   ---auto slider hero----   -->
+    <script>
+        // Auto slider every 3s (no arrows)
+        const slides = Array.from(document.querySelectorAll('.hero-slider img'));//collect and stores all the img in a array
+        let i = 0;
+        function show(n) {
+            i = (n + slides.length) % slides.length;     //when you reach the last image, it goes back to 0
+            slides.forEach((img, idx) => img.classList.toggle('active', idx === i));//add .active to i img and remove .active from the other
+        }
+        // initialize with first image
+        show(0);
+        // autoplay every 7s
+        setInterval(() => show(i + 1), 7000);
+    </script>
+
+
+<!---  ----Events-JavaScript ----    --->
+    <script>
+    document.querySelectorAll('.event-slider').forEach(slider => {
+        const images = slider.querySelectorAll('img');
+        const prevBtn = slider.querySelector('.prev');
+        const nextBtn = slider.querySelector('.next');
+        let index = 0;
+        function showImage(i) {
+            images.forEach(img => img.classList.remove('active'));
+            images[i].classList.add('active');
+        }
+   
+        prevBtn.addEventListener('click', () => {
+            index = (index - 1 + images.length) % images.length;
+            showImage(index);
+        });
+    
+        nextBtn.addEventListener('click', () => {
+            index = (index + 1) % images.length;
+            showImage(index);
+        });
+    });
+    </script>
+    
+    <script>
+        let currentDate = new Date();
+        
+        // events list
+        const events = {
+            '2025-11-10': 'Sociaty Day',
+            '2025-11-28': 'Cyber Security',
+            '2025-12-05': 'IoT Innovation Challenge'
+        };
+        
+        function renderCalendar() {
+            const year = currentDate.getFullYear();
+            const month = currentDate.getMonth();
+            
+            // Update header
+            const monthNames = ["January", "February", "March", "April", "May", "June",
+                "July", "August", "September", "October", "November", "December"];
+            document.getElementById('currentMonth').textContent = `${monthNames[month]} ${year}`;
+            
+            // Get first day of month and number of days
+            const firstDay = new Date(year, month, 1).getDay();
+            const daysInMonth = new Date(year, month + 1, 0).getDate();//nb of days in this month
+            const daysInPrevMonth = new Date(year, month, 0).getDate();//fill empty cells at the start.
+            
+            const calendarDates = document.getElementById('calendarDates'); //gives you access to add inside 
+            calendarDates.innerHTML = '';//to clear the old calendar because the new month layout will break
+            
+            // Previous month leftover days 
+            for (let i = firstDay - 1; i >= 0; i--) {
+                const date = daysInPrevMonth - i;
+                const dateDiv = document.createElement('div');
+                dateDiv.className = 'calendar-date other-month';
+                dateDiv.textContent = date;
+                calendarDates.appendChild(dateDiv);//to show the div in the calendar
+            }
+            
+            // Current month days
+            const today = new Date();
+            for (let date = 1; date <= daysInMonth; date++) {
+                const dateDiv = document.createElement('div');
+                dateDiv.className = 'calendar-date';
+                dateDiv.textContent = date;//the date number 
+                
+                // Check if the nb of data== today(nb)/month/year
+                if (date === today.getDate() && 
+                    month === today.getMonth() && 
+                    year === today.getFullYear()) {
+
+                    dateDiv.classList.add('today');
+                }
+                
+                // Check if event exists
+                const dateStr = `${year}-${String(month + 1).padStart(2, '0')}-${String(date).padStart(2, '0')}`;
+                if (events[dateStr]) {
+                    dateDiv.classList.add('has-event');
+                    dateDiv.title = events[dateStr];
+                }
+                
+                calendarDates.appendChild(dateDiv); //insert the div inside the calendar to show it
+            }
+            
+            // Next month days  
+            const totalCells = calendarDates.children.length;
+            const remainingCells = 42 - totalCells; // 6 rows × 7 days
+            for (let date = 1; date <= remainingCells; date++) {
+                const dateDiv = document.createElement('div');
+                dateDiv.className = 'calendar-date other-month';
+                dateDiv.textContent = date;
+                calendarDates.appendChild(dateDiv);
+            }
+        }
+        //on click to the prev btn
+        function previousMonth() {//change the current date 
+            currentDate.setMonth(currentDate.getMonth() - 1);
+            renderCalendar();
+        }
+        
+        function nextMonth() {
+            currentDate.setMonth(currentDate.getMonth() + 1);
+            renderCalendar();
+        }
+        
+        // Initial render
+        renderCalendar();
+    </script>
+
+
+
+</body>
+</html>
